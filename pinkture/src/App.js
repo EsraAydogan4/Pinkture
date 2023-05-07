@@ -5,6 +5,13 @@ function App() {
   return (
     <div className="App">
      <h1> merhaba </h1>
+     <body>
+
+
+     <img src="Pinkture.jpg"
+     alt="logo"
+     className="logo" />
+     </body>
     </div>
   );
 }

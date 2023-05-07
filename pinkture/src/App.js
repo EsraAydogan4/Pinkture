@@ -4,6 +4,7 @@ import React from 'react';
 import {Add, Chat, Notifications, FavoriteRounded, Person, QuestionMark} from "@mui/icons-material";
 import MenuContainer from './Components/MenuContainer';
 import { useEffect } from "react";
+import Pin from './Components/Pin';
 
 
 
@@ -42,6 +43,26 @@ function App() {
       <main>
         <div className="searchBox">
           <input type="text" placeholder="Search" />
+        </div>
+        <div className='mainContainer'>
+          <Pin pinSize = {'small'}/>
+          <Pin pinSize = {'medium'}/>
+          <Pin pinSize = {'large'}/>
+          <Pin pinSize = {'small'}/>
+          <Pin pinSize = {'medium'}/>
+          <Pin pinSize = {'large'}/>
+          <Pin pinSize = {'small'}/>
+          <Pin pinSize = {'medium'}/>
+          <Pin pinSize = {'large'}/>
+          <Pin pinSize = {'small'}/>
+          <Pin pinSize = {'medium'}/>
+          <Pin pinSize = {'large'}/>
+          <Pin pinSize = {'small'}/>
+          <Pin pinSize = {'medium'}/>
+          <Pin pinSize = {'large'}/>
+          <Pin pinSize = {'small'}/>
+          <Pin pinSize = {'medium'}/>
+          <Pin pinSize = {'large'}/>
         </div>
       </main>
 

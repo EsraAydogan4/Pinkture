@@ -3,10 +3,21 @@ import './App.css';
 import React from 'react';
 import {Add, Chat, Notifications, FavoriteRounded, Person, QuestionMark} from "@mui/icons-material";
 import MenuContainer from './Components/MenuContainer';
+import { useEffect } from "react";
 
 
 
 function App() {
+  useEffect(() => {
+    const allIcon = document.querySelectorAll(".iconContainer");
+
+    function setMenuActive() {
+      allIcon.forEach((n) => n.classList.remove("black"));
+      this.classList.add("black");
+    }
+
+    allIcon.forEach((n) => n.addEventListener("click", setMenuActive));
+  }, []);
   return (
     <div className="App">
       <div className="menuContainer">
@@ -28,7 +39,11 @@ function App() {
           </div>
         </div>  
       </div>
-      <main> </main>
+      <main>
+        <div className="searchBox">
+          <input type="text" placeholder="Search" />
+        </div>
+      </main>
 
     </div>
   );

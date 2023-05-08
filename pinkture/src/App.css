@@ -41,8 +41,13 @@
 
 }
 
-.iconContainer:hover{
+.iconContainer:hover, .iconContainer.active {
   background: #2e2f30;
+}
+
+.iconContainer:hover .MuiSvgIcon-root {
+  /* background: #feffff; */
+  color: white;
 }
 .iconContainer{
   width: 50px;
@@ -63,5 +68,4 @@ main{
   flex: 1;
   height: 100%;
 }
-
 

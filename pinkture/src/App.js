@@ -11,10 +11,21 @@ import './App.css';
 //import React from 'react';
 import { useEffect } from 'react';
 import MenuContainer from './Components/MenuContainer';
+import { useEffect } from "react";
 
 
 
 function App() {
+  useEffect(() => {
+    const allIcon = document.querySelectorAll(".iconContainer");
+
+    function setMenuActive() {
+      allIcon.forEach((n) => n.classList.remove("black"));
+      this.classList.add("black");
+    }
+
+    allIcon.forEach((n) => n.addEventListener("click", setMenuActive));
+  }, []);
   return (
     <div className="App">
     
@@ -37,7 +48,16 @@ function App() {
           </div>
         </div>  
       </div>
+
      
+
+      <main>
+        <div className="searchBox">
+          <input type="text" placeholder="Search" />
+        </div>
+      </main>
+
+
     </div>
   );
 }

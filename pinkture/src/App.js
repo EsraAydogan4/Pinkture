@@ -31,8 +31,9 @@ function App() {
     <div className="App">
     
       <div className="menuContainer">
-      <img src="./Pinkture.jpg" width="24" height="24" 
+      <img src="./Pinkture.jpg" width="40" height="0" 
       alt="Web Sitesi Logosu" />    
+      
 
         <div className="subMenu">
           <div>
@@ -49,13 +50,13 @@ function App() {
           </div>
         </div>  
       </div>
-
-     
+            
 
       <main>
         <div className="searchBox">
           <input type="text" placeholder="Search" />
-        </div>
+          </div>
+         
         <div className='mainContainer'>
           <Pin pinSize = {'small'}/>
           <Pin pinSize = {'medium'}/>
@@ -75,9 +76,10 @@ function App() {
           <Pin pinSize = {'small'}/>
           <Pin pinSize = {'medium'}/>
           <Pin pinSize = {'large'}/>
-        </div>
+        </div> 
+        
       </main>
-
+      
 
     </div>
   );

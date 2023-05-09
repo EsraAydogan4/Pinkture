@@ -1,19 +1,12 @@
-import {
-  Add, 
-  Chat,
-  Notifications, 
-  FavoriteRounded, 
-  Person, 
-  QuestionMark,
-} from "@mui/icons-material";
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import { useEffect } from 'react';
+import {Add, Chat, Notifications, FavoriteRounded, Person, QuestionMark} from "@mui/icons-material";
 import MenuContainer from './Components/MenuContainer';
+
+import { useEffect } from "react";
 import Pin from './Components/Pin';
-
-
+//import Notifications from './Components/Notifications';
 
 
 function App() {
@@ -29,11 +22,9 @@ function App() {
   }, []);
   return (
     <div className="App">
-    
       <div className="menuContainer">
-      <img src="./Pinkture.jpg" width="40" height="0" 
+      <img src="./Pinkture.jpg" width="40" height="40" 
       alt="Web Sitesi Logosu" />    
-      
 
         <div className="subMenu">
           <div>
@@ -50,13 +41,10 @@ function App() {
           </div>
         </div>  
       </div>
-            
-
       <main>
         <div className="searchBox">
           <input type="text" placeholder="Search" />
-          </div>
-         
+        </div>
         <div className='mainContainer'>
           <Pin pinSize = {'small'}/>
           <Pin pinSize = {'medium'}/>
@@ -76,10 +64,8 @@ function App() {
           <Pin pinSize = {'small'}/>
           <Pin pinSize = {'medium'}/>
           <Pin pinSize = {'large'}/>
-        </div> 
-        
+        </div>
       </main>
-      
 
     </div>
   );

@@ -1,8 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
 //import React from 'react';
-// import {Add, Chat, Notifications, FavoriteRounded, Person, QuestionMark, Settings} from "@mui/icons-material";
-import MenuContainer from './Components/MenuContainer';
 import { useEffect } from "react";
 import Pin from './Components/Pin';
 import MySideNav from './Components/MySideNav';
@@ -42,7 +39,7 @@ function App() {
       </Routes>
     </Router> 
       
-      <div className="menuContainer">
+      
       <img src="./Pinkture.jpg" width="24" height="24" 
       alt="Web Sitesi Logosu" />    
 
@@ -60,7 +57,7 @@ function App() {
             <MenuContainer icon={<Add />}/>
           </div>
         </div>   */}
-      </div>
+      
       <main>
         <div className="searchBox">
           <input type="text" placeholder="Search" />

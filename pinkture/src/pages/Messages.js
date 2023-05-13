@@ -1,12 +1,11 @@
 import React from 'react'
 
-
-function Home() {
+function Messages() {
   return (
     <div className='page'>
-      Home
+      Messages
     </div>
   )
 }
 
-export default Home
+export default Messages

@@ -1,11 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-import React from 'react';
-import {Add, Chat, Notifications, FavoriteRounded, Person, QuestionMark} from "@mui/icons-material";
-import MenuContainer from './Components/MenuContainer';
-
+//import React from 'react';
 import { useEffect } from "react";
 import Pin from './Components/Pin';
+import MySideNav from './Components/MySideNav';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Messages from './pages/Messages';
+import User from './pages/User';
+import Home from './pages/Home';
+import Notifications from './pages/Notifications';
+import Settings from './pages/Settings';
+
+
 
 
 
@@ -20,13 +25,25 @@ function App() {
 
     allIcon.forEach((n) => n.addEventListener("click", setMenuActive));
   }, []);
-  return (
+  return (   
+    
     <div className="App">
-      <div className="menuContainer">
+    <Router>
+      <MySideNav/>
+      <Routes>
+        <Route path="/Home" element={<Home/>} />
+        <Route path="/Messages" element={<Messages/>} />
+        <Route path="/Notifications" element={<Notifications/>} />
+        <Route path="/Settings" element={<Settings/>} />          
+        <Route path="/User" element={<User/>} />
+      </Routes>
+    </Router> 
+      
+      
       <img src="./Pinkture.jpg" width="24" height="24" 
       alt="Web Sitesi Logosu" />    
 
-        <div className="subMenu">
+        {/* <div className="subMenu">
           <div>
             <MenuContainer icon={<Person />}/>
             <MenuContainer icon={<Notifications />}/>
@@ -39,8 +56,8 @@ function App() {
             <MenuContainer icon={<QuestionMark />}/>
             <MenuContainer icon={<Add />}/>
           </div>
-        </div>  
-      </div>
+        </div>   */}
+      
       <main>
         <div className="searchBox">
           <input type="text" placeholder="Search" />

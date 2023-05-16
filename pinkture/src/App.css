@@ -41,15 +41,15 @@
 
 }
 
-.iconContainer:hover, .iconContainer.active {
+/* .iconContainer:hover, .iconContainer.active {
   background: #2e2f30;
-}
-
+} */
+/* 
 .iconContainer:hover .MuiSvgIcon-root {
-  /* background: #feffff; */
+  background: #feffff;
   color: white;
-}
-.iconContainer{
+} */
+/* .iconContainer{
   width: 50px;
   height: 50px;
   min-width: 40px;
@@ -62,7 +62,7 @@
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
   margin: 15px 0;
   transition: 0.3s;
-}
+} */
 
 main{
   flex: 1;

@@ -7,6 +7,7 @@
   display: flex;
   overflow-x: hidden;
   padding: 0px 40px;
+
  }
 .menuContainer{
   width: 100px;
@@ -184,3 +185,13 @@ main{
     margin-left: 75px;
   }
 }
+/* .MySideNav{
+  background-color: #f8186f;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .pages{
+  text-align: center;
+  font-size: 5rem;
+ } */
+

@@ -8,6 +8,7 @@ import Messages from './pages/Messages';
 import User from './pages/User';
 import Home from './pages/Home';
 import Notifications from './pages/Notifications';
+import './pages/Notifications.css'
 import Settings from './pages/Settings';
 
 

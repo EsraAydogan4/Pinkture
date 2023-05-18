@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            background-color: mistyrose;
+        }
+        
+        .chat-container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .chat-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .chat-header img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        
+        .chat-search {
+            display: flex;
+            align-items: center;
+            background-color: #dd9090;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        
+        .chat-search input[type="text"] {
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            margin-left: 5px;
+        }
+        
+        .chat-search .search-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background-color: #dd9090;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        
+        .chat-search .search-icon img {
+            width: 16px;
+            height: 16px;
+        }
+        
+        .chat-message-container {
+            max-height: 300px;
+            overflow-y: auto;
+            border-radius: 5px;
+        }
+        
+        .chat-message {
+            display: flex;
+            align-items: flex-start;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: #dd9090;
+            border-radius: 5px;
+        }
+        
+        .chat-message img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .chat-message-content {
+            flex-grow: 1;
+        }
+        
+        .chat-message-sender {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .chat-message-text {
+            margin-bottom: 0;
+        }
+    </style>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="./Pinkture.jpg" alt="Logo">
+            <h2>Messages</h2>
+            <div class="chat-search">
+                <div class="search-icon">
+                    <img src="./mignifier.png" alt="Search Icon">
+                </div>
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="chat-message-container">
+            <div class="chat-message">
+                <img src="./kedicik.jpg" alt="User Avatar">
+                <div class="chat-message-content">
+                    <div class="chat-message-sender">Beyza ÖZEREN</div>
+                    <div class="chat-message-text">Hello, how are you?</div>
+                </div>
+            </div>
+            <div class="chat-message">
+                <img src="./kedicik.jpg" alt="User Avatar">
+                <div class="chat-message-content">
+                    <div class="chat-message-sender">Pınar TAYLAN</div>
+                    <div class="chat-message-text">Hi, I'm good. How about you?</div>
+                </div>
+            </div>
+            <div class="chat-message">
+                <img src="./kedicik.jpg" alt="User Avatar">
+                <div class="chat-message-content">
+                    <div class="chat-message-sender">Gulnar ALİYEVA</div>
+                    <div class="chat-message-text">I'm doing great, thanks!</div>
+                </div>
+            </div>
+        <div class="chat-message">
+            <img src="./kedicik.jpg" alt="User Avatar">
+            <div class="chat-message-content">
+                <div class="chat-message-sender">Esra AYDOĞAN</div>
+                <div class="chat-message-text">That's good to hear!</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

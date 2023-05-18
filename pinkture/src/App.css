@@ -124,7 +124,7 @@ main{
   background: #f8f3f3;
   margin: 5px;
   align-items: center;
-  display: flex;
+  display: grid;
   flex-direction: column;
   position: relative;
   cursor: pointer;
@@ -185,12 +185,13 @@ main{
     margin-left: 75px;
   }
 }
-/* .MySideNav{
-  background-color: #f8186f;
+ .MySideNav .text nav{
+  color:#fffbfb;
+  background-color: #860738;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  }
 
- .pages{
+/* .pages{
   text-align: center;
   font-size: 5rem;
  } */

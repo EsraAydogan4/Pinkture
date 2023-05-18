@@ -43,5 +43,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.21.8",
+    "add": "^2.0.6",
+    "yarn": "^1.22.19"
   }
 }

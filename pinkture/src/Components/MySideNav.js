@@ -7,6 +7,7 @@ import  Messages from './message.svg';
 import  user from './user.svg';
 import  settings from './settings.svg';
 import  notifications from './notifications.svg';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -48,7 +49,8 @@ function MySideNav() {
                         {/* <i className="fa-light fa-user" style={{ fontSize: 1.5}}></i> */}
                         <img width={40} src={user} alt="" />
                       </NavIcon>
-                      <NavText>User</NavText>
+                      {/* <NavText>User</NavText> */}
+                      <NavLink to="userPage.html" target='blank'>User</NavLink>
                   </NavItem>
                   <NavItem eventKey="settings">
                       <NavIcon>

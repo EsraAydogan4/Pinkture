@@ -7,6 +7,8 @@ import  Messages from './message.svg';
 import  user from './user.svg';
 import  settings from './settings.svg';
 import  notifications from './notifications.svg';
+import  lgn from './lgn.svg';
+
 
 
 
@@ -22,6 +24,13 @@ function MySideNav() {
         >
             <SideNav.Toggle />
                 <SideNav.Nav defaultSelected="home">
+                <NavItem eventKey="login">
+                        <NavIcon>
+                            <img width={45} src={lgn} alt="" />
+                        </NavIcon> 
+                         <NavText>Log In Here!</NavText>  
+                        {/* <NavLink to="registerForm.html" target='blank'>Log In</NavLink> */}
+                  </NavItem>
                     <NavItem eventKey="home">
                         <NavIcon>
                             {/* <i className="fa fa-fw fa-home" style={{ fontSize: 1.5}}></i> */}

@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import Notifications from './pages/Notifications';
 import './pages/Notifications.css'
 import Settings from './pages/Settings';
+import LoginForm from './Components/loginForm';
 
 
 
@@ -30,6 +31,7 @@ function App() {
     
     <div className="App">
     <Router>
+    <LoginForm/>
       <MySideNav/>
       <Routes>
         <Route path="/Home" element={<Home/>} />

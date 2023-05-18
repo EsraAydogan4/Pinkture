@@ -50,11 +50,7 @@ function MySideNav() {
                         <img width={40} src={user} alt="" />
                       </NavIcon>
                       {/* <NavText>User</NavText> */}
-<<<<<<< HEAD
-                      <NavLink to="userPage.html" target='blank'>User</NavLink>
-=======
                       <NavLink to="userPage.html" activeClassName="aktif" target='blank'>User</NavLink>
->>>>>>> 3f5f8b6b007eb72e56a0c442aefda5655c840833
                   </NavItem>
                   <NavItem eventKey="settings">
                       <NavIcon>

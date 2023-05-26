@@ -9,9 +9,6 @@ import  settings from './settings.svg';
 import  notifications from './notifications.svg';
 import  lgn from './lgn.svg';
 
-
-
-
 function MySideNav() {
   const navigate=useNavigate();
   return (
@@ -57,7 +54,8 @@ function MySideNav() {
                         {/* <i className="fa-light fa-user" style={{ fontSize: 1.5}}></i> */}
                         <img width={40} src={user} alt="" />
                       </NavIcon>
-                      <NavText>User</NavText>
+                      {/* <NavText>User</NavText> */}
+                      <NavLink to="userPage.html" activeClassName="aktif" target='blank'>User</NavLink>
                   </NavItem>
                   <NavItem eventKey="settings">
                       <NavIcon>

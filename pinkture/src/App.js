@@ -1,6 +1,6 @@
 import './App.css';
 //import React from 'react';
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import Pin from './Components/Pin';
 import MySideNav from './Components/MySideNav';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -8,15 +8,21 @@ import Messages from './pages/Messages';
 import User from './pages/User';
 import Home from './pages/Home';
 import Notifications from './pages/Notifications';
-import './pages/Notifications.css'
+import './pages/Notifications.css';
 import Settings from './pages/Settings';
-import LoginForm from './Components/loginForm';
 
+// import signup from './Components/signup';
+import { Breadcrumb, Layout, Menu, theme } from 'antd';
 
-
+// const {
+//   token: { colorBgContainer },
+// } = theme.useToken();
 
 
 function App() {
+  
+  const { Header, Content, Footer } = Layout;
+
   useEffect(() => {
     const allIcon = document.querySelectorAll(".iconContainer");
 
@@ -31,9 +37,10 @@ function App() {
     
     <div className="App">
     <Router>
-    <LoginForm/>
+    {/* <LoginForm/> */}
       <MySideNav/>
       <Routes>
+        <Route path="/login" element={<login/>} />
         <Route path="/Home" element={<Home/>} />
         <Route path="/Messages" element={<Messages/>} />
         <Route path="/Notifications" element={<Notifications/>} />
@@ -42,7 +49,7 @@ function App() {
       </Routes>
     </Router> 
       
-      
+    
       <img src="./Pinkture.jpg" width="24" height="24" 
       alt="Web Sitesi Logosu" />    
 
@@ -86,8 +93,9 @@ function App() {
           <Pin pinSize = {'large'}/>
         </div>
       </main>
-
+      
     </div>
+    
   );
 }
 

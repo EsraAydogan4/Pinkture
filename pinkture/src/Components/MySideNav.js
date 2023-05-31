@@ -28,7 +28,8 @@ function MySideNav() {
                         <NavIcon>
                             <img width={45} src={lgn} alt="" />
                         </NavIcon> 
-                         <NavText>Log In Here!</NavText>  
+                          <NavLink to="login.html" activeClassName="aktif" target='blank'>login</NavLink>
+                         {/* <NavText>Log In Here!</NavText>   */}
                         {/* <NavLink to="registerForm.html" target='blank'>Log In</NavLink> */}
                   </NavItem>
                     <NavItem eventKey="home">
@@ -56,6 +57,8 @@ function MySideNav() {
                       <NavIcon>
                         {/* <i className="fa-light fa-user" style={{ fontSize: 1.5}}></i> */}
                         <img width={40} src={user} alt="" />
+                        <NavLink to="userPage.html" activeClassName="aktif" target='blank'>User</NavLink>
+
                       </NavIcon>
                       <NavText>User</NavText>
                   </NavItem>

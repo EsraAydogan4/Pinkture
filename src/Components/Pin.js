@@ -7,7 +7,7 @@ function Pin({ pinSize }) {
   return (
     <div className={`pin ${pinSize}`}>
       <a href="./comment.html" target="_blank" >
-        <img className="mainPic" src="./kedi.jpg" alt="" />
+        <img className="mainPic" src="./img/kedi.jpg" alt="" />
       </a>
       <div className="content">
         <h3>Minnoş</h3>

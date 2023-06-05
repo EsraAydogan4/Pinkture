@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import Messages from './pages/Messages';
 // import User from './pages/User';
 // import Home from './pages/Home';
-// import Notifications from './pages/Notifications';
+import Notifications from './pages/Notifications';
 // import Settings from './pages/Settings';
 // import Anasayfa from './Components/Anasayfa';
 import NavBar from './Components/NavBar';
@@ -27,16 +27,19 @@ function App() {
   return (   
     <div className="App">
       
-    <Router>
+    
       <NavBar />
-      {/* <Routes>
-        <Route path="/Home" element={<Home/>} />
+      <Routes>
+        <Route>
+        <Route path="/Notifications" element={<Notifications/>} />
+        </Route>
+        {/* <Route path="/Home" element={<Home/>} />
         <Route path="/Messages" element={<Messages/>} />
         <Route path="/Notifications" element={<Notifications/>} />
         <Route path="/Settings" element={<Settings/>} />          
-        <Route path="/User" element={<User/>} />
-      </Routes> */}
-    </Router> 
+        <Route path="/User" element={<User/>} /> */}
+      </Routes> 
+   
       
 
       <main>

@@ -1,7 +1,17 @@
 import React, { useState } from 'react';
 import './Notifications.css';
 
-
+const notificationsData = [
+    {
+      id: 1,
+      message: "Bildirim 1",
+    },
+    {
+      id: 2,
+      message: "Bildirim 2",
+    },
+    // Diğer bildirimler...
+  ];
 
 
 function Notifications() {
@@ -17,6 +27,11 @@ function Notifications() {
       <div className="icon" onClick={toggleNotifi}>
         <img src="components/notification.svg" alt="" /> <span>17</span>
       </div>
+      <div>
+      {notificationsData.map((notification) => (
+        <div key={notification.id}>{notification.message}</div>
+      ))}
+    </div>
       <div className={`notifi-box ${isBoxVisible ? 'visible' : ''}`} id="box">
         <h2>
           Notification <span>17</span>

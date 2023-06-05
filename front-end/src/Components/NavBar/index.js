@@ -15,6 +15,8 @@ import { FaSearch } from 'react-icons/fa';
 import { FaHome } from 'react-icons/fa';
 import { FaComment } from 'react-icons/fa';
 import { FaHeart } from 'react-icons/fa';
+import Notifications from '../Notifications';
+
 
 function NavBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -81,7 +83,8 @@ function NavBar() {
             <input type="text" placeholder="Arama..." />
             </div>
 
-            <Link to="./notifications.html" style={{ textDecoration: "none" }} target='blank'>
+            <Link to={'./Notifications'} style={{ textDecoration: "none" }} target='blank'>
+            
             <Button
                 onClick={handleCloseNavMenu}
                 sx={{
@@ -145,9 +148,6 @@ function NavBar() {
             </Button>
             </Link>
             Giriş Yap</GirisYapButonu>
-
-
-
 
             </Toolbar>
         </Container>

@@ -23,6 +23,9 @@ function NavBar() {
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
+    const showNotification = () => {
+      const notification = new Notification("This is a notification");
+    };
     
     const OlusturButonu = styled('div')(({ theme }) => ({
         backgroundColor: "mistyrose",
@@ -82,9 +85,9 @@ function NavBar() {
             <div className="searchBox">
             <input type="text" placeholder="Arama..." />
             </div>
-
-            <Link to={'./Notifications'} style={{ textDecoration: "none" }} target='blank'>
-            
+            <nav>
+            {/* <Link to={'./Notifications'} style={{ textDecoration: "none" }} target='blank'> */}
+            <button onClick={showNotification}>Show notification</button>
             <Button
                 onClick={handleCloseNavMenu}
                 sx={{
@@ -103,8 +106,8 @@ function NavBar() {
             >
                 <FaBell />
             </Button>
-            </Link>
-
+            {/* </Link> */}
+            </nav>
             <Link to="./messages.html" style={{ textDecoration: "none" }} target='blank'>
             <Button
                 onClick={handleCloseNavMenu}

@@ -1,29 +1,52 @@
 import './App.css';
 //import React from 'react';
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import Pin from './Components/Pin';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import Messages from './pages/Messages';
 // import User from './pages/User';
 // import Home from './pages/Home';
-import Notifications from './pages/Notifications';
+//import Notifications from './pages/Notifications';
+import Notification from "@material-ui/core/Notification";
 // import Settings from './pages/Settings';
 // import Anasayfa from './Components/Anasayfa';
 import NavBar from './Components/NavBar';
+import Snackbar from '@material-ui/core/Snackbar';
 
+const App = () => {
+  const [notification, setNotification] = useState(null);
 
-
-function App() {
   useEffect(() => {
-    const allIcon = document.querySelectorAll(".iconContainer");
+    const handleChange = () => {
+      setNotification({
+        message: "This is a notification",
+      });
+    };
 
-    function setMenuActive() {
-      allIcon.forEach((n) => n.classList.remove("black"));
-      this.classList.add("black");
-    }
+    // Listen for changes to the notification state
+    const subscription = notification.subscribe(handleChange);
 
-    allIcon.forEach((n) => n.addEventListener("click", setMenuActive));
+    // Unsubscribe when the component unmounts
+    return () => subscription.unsubscribe();
   }, []);
+
+  const showNotification = () => {
+    const notification = new Notification("This is a notification");
+  };
+
+
+
+// function App() {
+//   useEffect(() => {
+//     const allIcon = document.querySelectorAll(".iconContainer");
+
+//     function setMenuActive() {
+//       allIcon.forEach((n) => n.classList.remove("black"));
+//       this.classList.add("black");
+//     }
+
+//     allIcon.forEach((n) => n.addEventListener("click", setMenuActive));
+//   }, []);
   return (   
     <div className="App">
       
@@ -31,7 +54,13 @@ function App() {
       <NavBar />
       <Routes>
         <Route>
-        <Route path="/Notifications" element={<Notifications/>} />
+        
+          <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+            <Alert onClose={handleClose} severity={severity}>
+              {message}
+            </Alert>
+          </Snackbar>
+        
         </Route>
         {/* <Route path="/Home" element={<Home/>} />
         <Route path="/Messages" element={<Messages/>} />

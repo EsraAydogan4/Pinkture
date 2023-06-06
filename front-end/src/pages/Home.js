@@ -1,12 +1,20 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
+function home() {
+  const navigate=useNavigate();
 
-function Home() {
   return (
-    <div className='page'>
-      Home
+    <>
+      <div>
+    Home Page     
     </div>
-  )
+    <button onClick={()=> navigate('test ')}>
+      test
+    </button>
+    </>
+  );
 }
 
-export default Home
+export default home

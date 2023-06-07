@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-function home() {
+function Home() {
   const navigate=useNavigate();
 
   return (
@@ -17,4 +17,4 @@ function home() {
   );
 }
 
-export default home
+export default Home

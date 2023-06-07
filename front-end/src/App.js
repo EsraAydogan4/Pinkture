@@ -5,7 +5,7 @@ import Pin from './Components/Pin';
 //import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import Messages from './pages/Messages';
 // import User from './pages/User';
-// import Home from './pages/Home';
+import Home from './pages/Home';
 // import Notifications from './pages/Notifications';
 // import Settings from './pages/Settings';
 // import Anasayfa from './Components/Anasayfa';
@@ -32,7 +32,8 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-        <Route path='./pages/login' element={<Login />} />
+      <Route path="/" element={<Home/>} />
+        <Route path='/pages/login' element={<Login />} />
       </Routes>
       
       {/* <Routes>

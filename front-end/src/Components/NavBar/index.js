@@ -17,10 +17,11 @@ import { FaComment } from 'react-icons/fa';
 import { FaHeart } from 'react-icons/fa';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 // import GirisYap from '../GirisYap';
+import { useNavigate } from "react-router-dom";
 
 
 function NavBar() {
-    
+  let navigate = useNavigate(); 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [login, setLogin] = useState(false);
   const [register, setRegister] = useState(false);
@@ -31,7 +32,8 @@ function NavBar() {
       setLogin(false);
     }
     const openLogin = () => {
-      setLogin(true);
+      navigate("/pages/login");
+     // setLogin(true);
     }
     const closeRegister = () => {
       setRegister(false);
@@ -62,7 +64,9 @@ function NavBar() {
         setAnchorElNav(null);
       };
 
-      const GirisYapButonu = styled('div')(({ theme }) => ({
+      const GirisYapButonu = styled('button')(({ theme }) => (
+        
+        {
         backgroundColor: "mistyrose",
         color: "black",
         cursor: 'pointer',
@@ -140,8 +144,6 @@ function NavBar() {
                 <FaComment />
             </Button>
             </Link>
-
-            <GirisYapButonu>
             <Link to="/pages/login" style={{ textDecoration: "none" }} target='blank'>
             <Button
                 id="testgiris"
@@ -163,7 +165,9 @@ function NavBar() {
                 <FaUser/>
             </Button>
             </Link>
-            Giriş Yap</GirisYapButonu>
+            <GirisYapButonu bg="blue" type="submit" onClick={() => openLogin()}>
+        Giriş Yap
+      </GirisYapButonu>
 
 
 

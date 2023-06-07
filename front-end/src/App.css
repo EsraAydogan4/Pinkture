@@ -39,7 +39,15 @@ main{
   font-size: 18px;
   font-weight: bold;
 }
-
+.mainContainer {
+  flex: 1;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-auto-rows: 10px;
+  margin-top: 15px;
+  justify-content: center;
+}
 .pin {
   border-radius: 16px;
   background: #f8f3f3;

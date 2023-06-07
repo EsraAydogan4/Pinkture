@@ -1,30 +1,25 @@
 import React from 'react'
-import Anasayfa from '../Anasayfa'
+//import Anasayfa from '../Anasayfa'
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import styled from '@mui/material/styles/styled';
-import Typography from '@mui/material/Typography';
-import { useState } from 'react';
+// import Typography from '@mui/material/Typography';
+// import { useState } from 'react';
 import { FaBell } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
-import { FaPlus } from 'react-icons/fa';
-import { FaSearch } from 'react-icons/fa';
-import { FaHome } from 'react-icons/fa';
+// import { FaPlus } from 'react-icons/fa';
+// import { FaSearch } from 'react-icons/fa';
+// import { FaHome } from 'react-icons/fa';
 import { FaComment } from 'react-icons/fa';
-import { FaHeart } from 'react-icons/fa';
-import Notifications from '../Notifications';
-
+//import { FaHeart } from 'react-icons/fa';
 
 function NavBar() {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
+    const [setAnchorElNav] = React.useState(null);
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
-    };
-    const showNotification = () => {
-      const notification = new Notification("This is a notification");
     };
     
     const OlusturButonu = styled('div')(({ theme }) => ({
@@ -61,14 +56,8 @@ function NavBar() {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: '15px',
-        
-        
-
+       
     }));
-
-    
-
-    
 
   return (
     <>
@@ -85,9 +74,8 @@ function NavBar() {
             <div className="searchBox">
             <input type="text" placeholder="Arama..." />
             </div>
-            <nav>
-            {/* <Link to={'./Notifications'} style={{ textDecoration: "none" }} target='blank'> */}
-            <button onClick={showNotification}>Show notification</button>
+
+            <Link to="./pages/notifications" style={{ textDecoration: "none" }} target='_blank'>
             <Button
                 onClick={handleCloseNavMenu}
                 sx={{
@@ -101,13 +89,13 @@ function NavBar() {
                 margin: "0px",
                 "& > Typography": {
                     fontWeight: "bold",
-                },
+                }
                 }}
             >
                 <FaBell />
             </Button>
-            {/* </Link> */}
-            </nav>
+            </Link>
+
             <Link to="./messages.html" style={{ textDecoration: "none" }} target='blank'>
             <Button
                 onClick={handleCloseNavMenu}
@@ -151,6 +139,9 @@ function NavBar() {
             </Button>
             </Link>
             Giriş Yap</GirisYapButonu>
+
+
+
 
             </Toolbar>
         </Container>

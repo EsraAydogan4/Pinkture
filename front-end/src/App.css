@@ -23,30 +23,6 @@ main{
   margin-top: 15px;
   justify-content: center;
 }
-.searchBox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  background: #feffff;
-  border: 2px solid black;
-  padding: 8px 15px;
-  border-radius: 15px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  margin: 20px 15px;
-  
-}
-
-.searchBox input {
-  height: 100%;
-  border: none;
-  outline: none;
-  width: 100%;
-  padding: 0px 15px;
-  color: #313233;
-  font-size: 18px;
-  font-weight: bold;
-}
 
 .pin {
   border-radius: 16px;
@@ -72,7 +48,7 @@ main{
   padding: 0px 15px ;
 
 }
-
+  
 .pin .content h3{
   color: black;
   font-size: 18px;

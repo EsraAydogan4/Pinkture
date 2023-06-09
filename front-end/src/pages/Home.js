@@ -10,9 +10,9 @@ function Home() {
       <div>
     Home Page     
     </div>
-    <button onClick={()=> navigate('test ')}>
+    {/* <button onClick={()=> navigate('test ')}>
       test
-    </button>
+    </button> */}
     </>
   );
 }

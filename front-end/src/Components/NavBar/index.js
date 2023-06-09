@@ -16,8 +16,8 @@ import { FaHome } from 'react-icons/fa';
 import { FaComment } from 'react-icons/fa';
 import { FaHeart } from 'react-icons/fa';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-// import GirisYap from '../GirisYap';
 import { useNavigate } from "react-router-dom";
+import './Navbar.css';
 
 
 function NavBar() {
@@ -60,12 +60,12 @@ function NavBar() {
 
     }));
 
+    
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
       };
 
       const GirisYapButonu = styled('button')(({ theme }) => (
-        
         {
         backgroundColor: "mistyrose",
         color: "black",
@@ -81,11 +81,7 @@ function NavBar() {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: '15px',
-        
-        
-
-    }));
-
+        }));
 
   return (
     <>
@@ -97,11 +93,13 @@ function NavBar() {
             <Link to={'/'}>
               <img src="./Pinkture.jpg" alt="photo" width={"40px"} height={"40px"} padding={"10px"}></img>
             </Link>
+             {/* <a href="/" target="_blank"><img src="./Pinkture.jpg" width="40" height="40" alt="logo" /></a> */}
+
             <OlusturButonu>Pin Ekle</OlusturButonu>
             
-            <div className="searchBox">
-            <input type="text" placeholder="Arama..." />
-            </div>
+            <div className="searchBox">                   
+            <input type="text" placeholder="Arama..." /> 
+            </div> 
 
             <Link to="./notifications.html" style={{ textDecoration: "none" }} target='blank'>
             <Button
@@ -144,9 +142,10 @@ function NavBar() {
                 <FaComment />
             </Button>
             </Link>
+            
             <Link to="/pages/login" style={{ textDecoration: "none" }} target='blank'>
             <Button
-                id="testgiris"
+                id="giris"
                 onClick={handleCloseNavMenu}
                 sx={{
                 my: 2,
@@ -154,22 +153,20 @@ function NavBar() {
                 display: "flex",
                 ml: -5,
                 textTransform: "none",
-                fontSize: "18px",
+                fontSize: "24px",
                 padding: "0px",
                 margin: "0px",
                 "& > Typography": {
                     fontWeight: "bold",
                 },
                 }}
-            >
+                >
                 <FaUser/>
             </Button>
             </Link>
-            <GirisYapButonu bg="blue" type="submit" onClick={() => openLogin()}>
-        Giriş Yap
-      </GirisYapButonu>
-
-
+            {/* <GirisYapButonu bg="blue" type="submit" onClick={() => openLogin()}>
+              Giriş Yap 
+            </GirisYapButonu> */}
 
             </Toolbar>
         </Container>

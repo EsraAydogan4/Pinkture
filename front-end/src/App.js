@@ -11,7 +11,8 @@ import Home from './pages/Home';
 // import Anasayfa from './Components/Anasayfa';
 import NavBar from './Components/NavBar';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import Login from './pages/login';
+import Login from './pages/Login/login';
+import Register from './pages/Register/register';
 
 function App() {
   
@@ -34,15 +35,8 @@ function App() {
       <Routes>
       <Route path="/" element={<Home/>} />
         <Route path='/pages/login' element={<Login />} />
+          <Route path='/pages/register' element={<Register />} />
       </Routes>
-      
-      {/* <Routes>
-        <Route path="/Home" element={<Home/>} />
-        <Route path="/Messages" element={<Messages/>} />
-        <Route path="/Notifications" element={<Notifications/>} />
-        <Route path="/Settings" element={<Settings/>} />          
-        <Route path="/User" element={<User/>} />
-      </Routes> */}
     </Router> 
       
 

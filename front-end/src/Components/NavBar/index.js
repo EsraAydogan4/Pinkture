@@ -19,9 +19,26 @@ import { FaComment } from 'react-icons/fa';
 function NavBar() {
     const [setAnchorElNav] = React.useState(null);
     const handleOpenNavMenu = (event) => {
+
         setAnchorElNav(event.currentTarget);
     };
-    
+    const closeLogin = () => {
+      setLogin(false);
+    }
+    const openLogin = () => {
+      navigate("/pages/login");
+     // setLogin(true);
+    }
+    const closeRegister = () => {
+      setRegister(false);
+    }
+    const openRegister = () => {
+      setRegister(true);
+    }
+    const closeDialog = () => {
+      setLogin(false);
+      setRegister(false);
+    }
     const OlusturButonu = styled('div')(({ theme }) => ({
         backgroundColor: "mistyrose",
         color: "black",
@@ -41,7 +58,9 @@ function NavBar() {
         setAnchorElNav(null);
       };
 
-      const GirisYapButonu = styled('div')(({ theme }) => ({
+      const GirisYapButonu = styled('button')(({ theme }) => (
+        
+        {
         backgroundColor: "mistyrose",
         color: "black",
         cursor: 'pointer',
@@ -61,8 +80,8 @@ function NavBar() {
 
   return (
     <>
-    {/* <GirisYap login={login} closeDialog={closeDialog} closeLogin={closeLogin} openRegister={openRegister} />
-      <KayitOl register={register} closeDialog={closeDialog} closeRegister={closeRegister} openLogin={openLogin} /> */}
+    {/* <GirisYap login={login} closeDialog={closeDialog} closeLogin={closeLogin} openRegister={openRegister} /> */}
+      {/* <KayitOl register={register} closeDialog={closeDialog} closeRegister={closeRegister} openLogin={openLogin} />  */}
       <AppBar position="fixed" sx={{ bgcolor: "mistyrose", mt: 0 , maxHeight:70, justifyContent: 'center'}}>
         <Container maxWidth="lg">
           <Toolbar disableGutters>
@@ -116,10 +135,9 @@ function NavBar() {
                 <FaComment />
             </Button>
             </Link>
-
-            <GirisYapButonu>
-            <Link to="./login.html" style={{ textDecoration: "none" }} target='blank'>
+            <Link to="/pages/login" style={{ textDecoration: "none" }} target='blank'>
             <Button
+                id="testgiris"
                 onClick={handleCloseNavMenu}
                 sx={{
                 my: 2,
@@ -138,8 +156,9 @@ function NavBar() {
                 <FaUser/>
             </Button>
             </Link>
-            Giriş Yap</GirisYapButonu>
-
+            <GirisYapButonu bg="blue" type="submit" onClick={() => openLogin()}>
+        Giriş Yap
+      </GirisYapButonu>
 
 
 

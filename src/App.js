@@ -2,7 +2,6 @@ import './App.css';
 //import React from 'react';
 import { useEffect } from "react";
 import Pin from './Components/Pin';
-//import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import Messages from './pages/Messages';
 // import User from './pages/User';
 import Home from './pages/Home';
@@ -10,11 +9,12 @@ import Home from './pages/Home';
 // import Settings from './pages/Settings';
 // import Anasayfa from './Components/Anasayfa';
 import NavBar from './Components/NavBar';
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import Login from './pages/login';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './pages/Login/login';
+import Register from './pages/Register/register';
 
 function App() {
-
+  
   useEffect(() => {
     const allIcon = document.querySelectorAll(".iconContainer");
 
@@ -33,16 +33,9 @@ function App() {
       <NavBar />
       <Routes>
       <Route path="/" element={<Home/>} />
-        <Route path='/pages/login' element={<Login />} />
-        <Route path="/notifications" element={Notifications} />
+      <Route path='/pages/login' element={<Login />} />
+       <Route path='/pages/register' element={<Register />} />
       </Routes>
-      {/* <Routes>
-        <Route path="/Home" element={<Home/>} />
-        <Route path="/Messages" element={<Messages/>} />
-        <Route path="/Notifications" element={<Notifications/>} />
-        <Route path="/Settings" element={<Settings/>} />          
-        <Route path="/User" element={<User/>} />
-      </Routes> */}
     </Router> 
       
 
@@ -69,6 +62,8 @@ function App() {
           <Pin pinSize = {'large'}/>
         </div>
       </main>
+      
+      
     </div>
   );
 }

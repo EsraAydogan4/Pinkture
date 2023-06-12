@@ -10,9 +10,6 @@ function Home() {
       <div>
     Home Page     
     </div>
-    <button onClick={()=> navigate('test ')}>
-      test
-    </button>
     </>
   );
 }

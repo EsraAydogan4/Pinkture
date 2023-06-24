@@ -1,20 +1,12 @@
 /* Full-width input fields */
 input[type=text], input[type=password] {
-    /* width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1; */
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    /* border: 1px solid #ccc; */
     box-sizing: border-box;
     cursor: pointer;
     border: 2px solid white;
-    /* padding: 8px 15px; */
     border-radius: 15px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   }
@@ -25,17 +17,18 @@ input[type=text], input[type=password] {
   
   }
   
-  hr {
+  /* hr {
     border: 1px solid #f1f1f1;
     margin-bottom: 25px;
   }
-  
+   */
   /* Set a style for all buttons */
   button {
     background-color: white;
     color: #f8186f;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 20px 0px;
+    margin-top: 0px;
     border: 2px solid white;
     border-color: #f8186f;
     cursor: pointer;
@@ -84,6 +77,5 @@ input[type=text], input[type=password] {
   /* Change styles for cancel button and signup button on extra small screens */
   @media screen and (max-width: 300px) {
     .cancelbtn, .signupbtn {
-       width: 100%;
-    }
+display: block;    }
   }

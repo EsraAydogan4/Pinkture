@@ -16,9 +16,9 @@ import { FaHome } from 'react-icons/fa';
 import { FaComment } from 'react-icons/fa';
 import { FaHeart } from 'react-icons/fa';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+// import GirisYap from '../GirisYap';
 import { useNavigate } from "react-router-dom";
 import './Navbar.css';
-
 
 function NavBar() {
   let navigate = useNavigate(); 
@@ -60,12 +60,12 @@ function NavBar() {
 
     }));
 
-    
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
       };
 
       const GirisYapButonu = styled('button')(({ theme }) => (
+        
         {
         backgroundColor: "mistyrose",
         color: "black",
@@ -81,7 +81,11 @@ function NavBar() {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: '15px',
-        }));
+        
+        
+
+    }));
+
 
   return (
     <>
@@ -90,16 +94,14 @@ function NavBar() {
       <AppBar position="fixed" sx={{ bgcolor: "mistyrose", mt: 0 , maxHeight:70, justifyContent: 'center'}}>
         <Container maxWidth="lg">
           <Toolbar disableGutters>
-            <Link to={'/'}>
-              <img src="./Pinkture.jpg" alt="photo" width={"40px"} height={"40px"} padding={"10px"}></img>
-            </Link>
-             {/* <a href="/" target="_blank"><img src="./Pinkture.jpg" width="40" height="40" alt="logo" /></a> */}
-
+            <a href='/'>
+              <img src="./Pinkture.ico" alt="photo" width={"40px"} height={"40px"} padding={"10px"}></img>
+            </a>
             <OlusturButonu>Pin Ekle</OlusturButonu>
             
-            <div className="searchBox">                   
-            <input type="text" placeholder="Arama..." /> 
-            </div> 
+            <div className="searchBox">
+            <input type="text" placeholder="Arama..." />
+            </div>
 
             <Link to="./notifications.html" style={{ textDecoration: "none" }} target='blank'>
             <Button
@@ -142,10 +144,9 @@ function NavBar() {
                 <FaComment />
             </Button>
             </Link>
-            
             <Link to="/pages/login" style={{ textDecoration: "none" }} target='blank'>
             <Button
-                id="giris"
+                id="testgiris"
                 onClick={handleCloseNavMenu}
                 sx={{
                 my: 2,
@@ -153,20 +154,22 @@ function NavBar() {
                 display: "flex",
                 ml: -5,
                 textTransform: "none",
-                fontSize: "24px",
+                fontSize: "18px",
                 padding: "0px",
                 margin: "0px",
                 "& > Typography": {
                     fontWeight: "bold",
                 },
                 }}
-                >
+            >
                 <FaUser/>
             </Button>
             </Link>
             {/* <GirisYapButonu bg="blue" type="submit" onClick={() => openLogin()}>
-              Giriş Yap 
-            </GirisYapButonu> */}
+        Giriş Yap
+      </GirisYapButonu> */}
+
+
 
             </Toolbar>
         </Container>

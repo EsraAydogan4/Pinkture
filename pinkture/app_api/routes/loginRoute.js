@@ -3,6 +3,6 @@ import * as loginController from '../controllers/loginController.js';
 
 const router = express.Router();
 
-router.route('/login').post(loginController.girisyap);
+router.route('/pages/login').post(loginController.girisyap);
 
 export default router;

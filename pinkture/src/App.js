@@ -1,21 +1,28 @@
 import './App.css';
-//import React from 'react';
 import { useEffect } from "react";
-import Pin from './Components/Pin';
-import MySideNav from './Components/MySideNav';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Messages from './pages/Messages';
-import User from './pages/User';
-import Home from './pages/Home';
-import Notifications from './pages/Notifications';
-import './pages/Notifications.css'
-import Settings from './pages/Settings';
+import Home from './pages/Home/Home';
+import NavBar from './Components/NavBar';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import Login from './pages/Login/login';
+import Register from './pages/Register/register';
+// import loginRoute from './back-end/app_api/routes/loginRoute.js';
+
+// var createError=require('http-errors');
+// var express=require('express');
+// var path=require('path');
+// var cookieParser=require('cookie-parser');
+// var logger=require('morgan');
+// require('./app_api/models/db'); 
+// var indexRouter=require('./app_server/routes/index');
+// var app=express();
+
 
 
 
 
 
 function App() {
+  
   useEffect(() => {
     const allIcon = document.querySelectorAll(".iconContainer");
 
@@ -26,65 +33,29 @@ function App() {
 
     allIcon.forEach((n) => n.addEventListener("click", setMenuActive));
   }, []);
+
+  // const app=express();
+  // app.use('/',loginRoute);
+  // app.listen(port, ()=>{
+  //   console.log('Application running on port: ${port}');
+  // });
   return (   
     
     <div className="App">
+      
     <Router>
-      <MySideNav/>
+      <NavBar />
       <Routes>
-        <Route path="/Home" element={<Home/>} />
-        <Route path="/Messages" element={<Messages/>} />
-        <Route path="/Notifications" element={<Notifications/>} />
-        <Route path="/Settings" element={<Settings/>} />          
-        <Route path="/User" element={<User/>} />
+      <Route path="/" element={<Home/>} />
+      <Route path='/pages/login' element={<Login />} />
+       <Route path='/pages/register' element={<Register />} />
       </Routes>
     </Router> 
       
-      
-      <img src="./Pinkture.jpg" width="24" height="24" 
-      alt="Web Sitesi Logosu" />    
 
-        {/* <div className="subMenu">
-          <div>
-            <MenuContainer icon={<Person />}/>
-            <MenuContainer icon={<Notifications />}/>
-            <MenuContainer icon={<Chat />}/>
-          </div>
-          <div>
-            <MenuContainer icon={<FavoriteRounded />}/>
-          </div>
-          <div>
-            <MenuContainer icon={<QuestionMark />}/>
-            <MenuContainer icon={<Add />}/>
-          </div>
-        </div>   */}
       
-      <main>
-        <div className="searchBox">
-          <input type="text" placeholder="Search" />
-        </div>
-        <div className='mainContainer'>
-          <Pin pinSize = {'small'}/>
-          <Pin pinSize = {'medium'}/>
-          <Pin pinSize = {'large'}/>
-          <Pin pinSize = {'small'}/>
-          <Pin pinSize = {'medium'}/>
-          <Pin pinSize = {'large'}/>
-          <Pin pinSize = {'small'}/>
-          <Pin pinSize = {'medium'}/>
-          <Pin pinSize = {'large'}/>
-          <Pin pinSize = {'small'}/>
-          <Pin pinSize = {'medium'}/>
-          <Pin pinSize = {'large'}/>
-          <Pin pinSize = {'small'}/>
-          <Pin pinSize = {'medium'}/>
-          <Pin pinSize = {'large'}/>
-          <Pin pinSize = {'small'}/>
-          <Pin pinSize = {'medium'}/>
-          <Pin pinSize = {'large'}/>
-        </div>
-      </main>
-
+      
+      
     </div>
   );
 }

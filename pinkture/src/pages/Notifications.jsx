@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './Notifications.css';
 
+
+
+
 function Notifications() {
   const [isBoxVisible, setBoxVisible] = useState(false);
 

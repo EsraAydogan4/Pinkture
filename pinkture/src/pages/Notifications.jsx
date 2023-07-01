@@ -1,9 +1,3 @@
-import React, { useState } from 'react';
-import './Notifications.css';
-
-
-
-
 function Notifications() {
   const [isBoxVisible, setBoxVisible] = useState(false);
 
@@ -17,7 +11,7 @@ function Notifications() {
       <div className="icon" onClick={toggleNotifi}>
         <img src="components/notification.svg" alt="" /> <span>17</span>
       </div>
-      <div className={`notifi-box ${isBoxVisible ? 'visible' : ''}`} id="box">
+      <div className={'notifi-box ' + (isBoxVisible ? 'visible' : '')} id="box">
         <h2>
           Notification <span>17</span>
         </h2>
@@ -46,5 +40,3 @@ function Notifications() {
     </nav>
   );
 }
-
-export default Notifications;

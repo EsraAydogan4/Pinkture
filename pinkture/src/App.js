@@ -6,10 +6,12 @@ import NavBar from './Components/NavBar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login/login';
 import Register from './pages/Register/register';
+import Search from './Components/SearchBox'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App">    
+    
       <Router>
         <NavBar />
         <Routes>

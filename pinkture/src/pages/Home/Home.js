@@ -13,7 +13,7 @@ function Pin({ pinSize }) {
         <img className="mainPic" src="./img/ahalteke.jpeg" alt="" />
       </a>
       <div className="content">
-        <h3>Minnoş</h3>
+        <h3>at</h3>
         <div className="search"></div>
       </div>
     </div>
@@ -27,7 +27,7 @@ function Home() {
   return (
     <>
       <div>
-    Home Page     
+      
     </div>
     <main>
         

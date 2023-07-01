@@ -5,12 +5,8 @@ import './Login.css';
 function Login() {
   return (
     <header>
-      <form action="action_page.php" method="post">
-        <div className="logo">
-          <a href="index.html">
-            <img src="./Pinkture.ico" alt="Site Logosu" />
-          </a>
-        </div>
+      <form action="/login" method="post">
+
         <div className="container">
           <div style={{ width: "100%", borderRadius: "20px", margin: "30px 20px" }}></div>
           <h1>Giriş Yap</h1>

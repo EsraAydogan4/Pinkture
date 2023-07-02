@@ -1,4 +1,4 @@
-input[type=text], input[type=password] {
+.input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -12,7 +12,7 @@ input[type=text], input[type=password] {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   }
   /* Set a style for all buttons */
-  button {
+  .login-button {
     background-color: #f8186f;
     color: white;
     cursor: pointer;
@@ -25,7 +25,7 @@ input[type=text], input[type=password] {
     margin-top: 0px;
   }
   /* Add a hover effect for buttons */
-  button:hover {
+  .login-button:hover {
     opacity: 0.8;
   }
   /* Extra style for the cancel button (red) */
@@ -42,6 +42,19 @@ input[type=text], input[type=password] {
     cursor: pointer;
     border-radius: 15px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .signupbtn{
+    background-color: #f8186f;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    border: 2px solid white;
+    padding: 8px 15px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    margin: 20px 0px;
+    margin-top: 0px;
   }
    
   /* The "Forgot password" text */

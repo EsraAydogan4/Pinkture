@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 // import Pin from './Components/Pin';
-import "./Pin.css";
+import "./pin.css";
 
 function Pin({ pinSize }) {
  
@@ -14,7 +14,7 @@ function Pin({ pinSize }) {
       </a>
       <div className="content">
         <h3>Minnoş</h3>
-        <div className="search"></div>
+        {/* <div className="search"></div> */}
       </div>
     </div>
     
@@ -22,12 +22,12 @@ function Pin({ pinSize }) {
 }
 
 function Home() {
-  const navigate=useNavigate();
+  // const navigate=useNavigate();
 
   return (
     <>
       <div>
-    Home Page     
+        
     </div>
     <main>
         
@@ -56,4 +56,4 @@ function Home() {
   );
 }
 
-export default Home
+export default Home;

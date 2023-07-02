@@ -1,18 +1,13 @@
-// login.js
 import React from 'react';
-import './Login.css';
+import { Link } from 'react-router-dom';
+import './login.css';
 
 function Login() {
   return (
     <header>
-      <form action="action_page.php" method="post">
-        <div className="logo">
-          <a href="index.html">
-            <img src="./Pinkture.ico" alt="Site Logosu" />
-          </a>
-        </div>
+      <form>
         <div className="container">
-          <div style={{ width: "100%", borderRadius: "20px", margin: "30px 20px" }}></div>
+          <div style={{ width: "100%", borderRadius: "20px", margin: "100px 10px" }}></div>
           <h1>Giriş Yap</h1>
           <label htmlFor="uname"><b>Kullanıcı adı</b></label>
           <input type="text" placeholder="Enter Username" name="uname" required />
@@ -21,11 +16,11 @@ function Login() {
           <input type="password" placeholder="Enter Password" name="psw" required />
 
           <div className="clearfix">
-            <button type="button" className="cancelbtn">İptal</button>
-            <button type="submit" className="signupbtn">Giriş yap</button>
+            <button type="login-button" className="cancelbtn">İptal</button>
+            <Link to="/pages/UserPage/" className="signupbtn">Giriş yap</Link>
           </div>
           <div className="container">
-            <button>
+            <button className='registerbtn'>
               <span style={{ color: '#f8186f' }} className="girisyap">
                 {' '}
                 <a href="register">Hesabın yok mu? Kayıt ol.</a>

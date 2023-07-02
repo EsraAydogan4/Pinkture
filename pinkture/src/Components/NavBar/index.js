@@ -147,6 +147,7 @@ function NavBar() {
                 <FaComment />
             </Button>
             </Link>
+
             <Link to="/pages/login" style={{ textDecoration: "none" }} target='blank'>
             <Button
                 id="testgiris"

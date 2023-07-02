@@ -1,71 +1,25 @@
+// app.js
+import React from 'react';
 import './App.css';
-//import React from 'react';
-import { useEffect } from "react";
-import Pin from './Components/Pin';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Messages from './pages/Messages';
-// import User from './pages/User';
-// import Home from './pages/Home';
-// import Notifications from './pages/Notifications';
-// import Settings from './pages/Settings';
-// import Anasayfa from './Components/Anasayfa';
+import Home from './pages/Home/Home';
 import NavBar from './Components/NavBar';
-
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './pages/Login/login';
+import Register from './pages/Register/register';
 
 function App() {
-  useEffect(() => {
-    const allIcon = document.querySelectorAll(".iconContainer");
-
-    function setMenuActive() {
-      allIcon.forEach((n) => n.classList.remove("black"));
-      this.classList.add("black");
-    }
-
-    allIcon.forEach((n) => n.addEventListener("click", setMenuActive));
-  }, []);
-  return (   
+  return (
     <div className="App">
-      
-    <Router>
-      <NavBar />
-      {/* <Routes>
-        <Route path="/Home" element={<Home/>} />
-        <Route path="/Messages" element={<Messages/>} />
-        <Route path="/Notifications" element={<Notifications/>} />
-        <Route path="/Settings" element={<Settings/>} />          
-        <Route path="/User" element={<User/>} />
-      </Routes> */}
-    </Router> 
-      
-
-      <main>
-        
-        <div className='mainContainer'>
-          <Pin pinSize = {'small'}/>
-          <Pin pinSize = {'medium'}/>
-          <Pin pinSize = {'large'}/>
-          <Pin pinSize = {'small'}/>
-          <Pin pinSize = {'medium'}/>
-          <Pin pinSize = {'large'}/>
-          <Pin pinSize = {'small'}/>
-          <Pin pinSize = {'medium'}/>
-          <Pin pinSize = {'large'}/>
-          <Pin pinSize = {'small'}/>
-          <Pin pinSize = {'medium'}/>
-          <Pin pinSize = {'large'}/>
-          <Pin pinSize = {'small'}/>
-          <Pin pinSize = {'medium'}/>
-          <Pin pinSize = {'large'}/>
-          <Pin pinSize = {'small'}/>
-          <Pin pinSize = {'medium'}/>
-          <Pin pinSize = {'large'}/>
-        </div>
-      </main>
-
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/pages/login" element={<Login />} />
+          <Route path="/pages/register" element={<Register />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
-
 
 export default App;

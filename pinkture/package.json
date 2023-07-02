@@ -14,15 +14,15 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@trendmicro/react-sidenav": "^0.5.0",
-    "axios": "^1.4.0",
     "mongoose": "^7.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hooks": "^1.0.1",
     "react-icons": "^4.9.0",
     "react-router-dom": "^6.11.2",
     "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4"
+    "url": "^0.11.1",
+    "web-vitals": "^2.1.4",
+    "yup": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -47,10 +47,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/eslint-parser": "^7.21.8",
-    "add": "^2.0.6",
-    "yarn": "^1.22.19"
   }
 }

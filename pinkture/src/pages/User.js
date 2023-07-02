@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 class PinterestProfilSayfasi extends React.Component {
@@ -52,3 +53,16 @@ class PinterestProfilSayfasi extends React.Component {
 }
 
 export default PinterestProfilSayfasi;
+=======
+import React from 'react'
+
+function User() {
+  return (
+    <div className='page'>
+      User
+    </div>
+  )
+}
+
+export default User
+>>>>>>> 832ab570839cda7c42f6567495b32be193374d57

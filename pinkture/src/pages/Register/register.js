@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import React from 'react';
+import axios from "axios";
 import './Register.css'; // CSS dosyasını import et
-
+import { useNavigate } from 'react-router-dom';
 export default function Register() {
-
+  let navigate = useNavigate();
   const [name, setname]=useState('');
   const [surname, setsurname]=useState('');
   const [email, setemail]=useState('');
@@ -12,11 +13,9 @@ export default function Register() {
 
   async function register(ev){
     ev.preventDefault();
-    await fetch('http://localhost:3001/pages/register',{
-      method: 'POST',
-      body:JSON.stringify({name,surname,username,email,password}),
-      headers: {'Content-Type':'application/json'},
-    })
+    axios.post("http://localhost:3001/pages/register",{name,surname,username,email,password}).then(function register(){
+      navigate('/pages/login');
+    });
   }
 
   return(

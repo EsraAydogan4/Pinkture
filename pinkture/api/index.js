@@ -8,7 +8,7 @@ app.use(express.json());
 
 // MongoDB bağlantısı
 mongoose
-  .connect('mongodb+srv://pinart:pinart@cluster0.uswwgnc.mongodb.net/?retryWrites=true&w=majority', {
+  .connect('mongodb://localhost/test', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -23,13 +23,12 @@ mongoose
 
       // Kullanıcı kaydı işlemleri burada gerçekleştir
       // veritabanına kaydetme işlemi
-      // const newUser = new User({ name, surname, username, email, password });
-      // newUser.save();
-
+     // const newUser = new User({ name, surname, username, email, password });
+      //newUser.save();
       res.json({ success: true, message: 'Kullanıcı başarıyla kaydedildi.' });
     });
 
-    app.listen(3000, () => {
+    app.listen(3001, () => {
       console.log('Sunucu çalışıyor...');
     });
   })

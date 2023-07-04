@@ -1,4 +1,5 @@
 import React from 'react'
+import Anasayfa from '../Anasayfa'
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
@@ -88,14 +89,17 @@ function NavBar() {
 
   return (
     <>
-    {/* <GirisYap login={login} closeDialog={closeDialog} closeLogin={closeLogin} openRegister={openRegister} /> */}
-      {/* <KayitOl register={register} closeDialog={closeDialog} closeRegister={closeRegister} openLogin={openLogin} />  */}
       <AppBar position="fixed" sx={{ bgcolor: "mistyrose", mt: 0 , maxHeight:70, justifyContent: 'center'}}>
         <Container maxWidth="lg">
           <Toolbar disableGutters>
-            <a href='/'>
-              <img src="./Pinkture.jpg" alt="photo" width={"40px"} height={"40px"} padding={"10px"}></img>
-            </a>
+            {/* <a href='/'>
+              <img src="./Pinkture.ico" alt="photo" width={"40px"} height={"40px"} padding={"10px"}></img>
+            </a> */}
+            <Link to="/">            
+            <img src="/Pinkture.ico" alt="photo" width={"40px"} height={"40px"} padding={"10px"}></img>
+            </Link>
+            
+
             <OlusturButonu>Pin Ekle</OlusturButonu>
             
             <div className="searchBox">

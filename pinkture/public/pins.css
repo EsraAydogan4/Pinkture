@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
+    height: 100vw;
+    background-color: mistyrose;
+    overflow-x: hidden;
+    padding: 0px 40px;
+  }
+  
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .photo {
+    position: relative;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .photo-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .photo:hover .photo-buttons {
+    opacity: 1;
+  }
+  
+  .photo-buttons button {
+    padding: 5px 10px;
+    background-color: #9e9e9e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .modal-content {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .edit-panel {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .edit-panel form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+  }
+  
+  .edit-panel input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  .edit-panel button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

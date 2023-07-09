@@ -1,4 +1,4 @@
-const User = require('../models/User');
+// const User = require('../models/User');
 
 // Kullanıcı sayfasını getir
 const getUserPage = async (req, res) => {

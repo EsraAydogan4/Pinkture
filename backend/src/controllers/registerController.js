@@ -60,3 +60,6 @@ const kayitOl= function(req,res){
   }
   )
 }
+module.exports={
+  kayitOl
+}

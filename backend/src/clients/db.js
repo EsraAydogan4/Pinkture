@@ -1,7 +1,7 @@
 var mongoose = require('mongoose' );
 // require("./"); //buraya bir sema verilcek
  var dbURI = "mongodb+srv://pinart:pinart@cluster0.uswwgnc.mongodb.net/?retryWrites=true&w=majority";
- //var dbURI = "mongodb://localhost/pinkture";
+//  var dbURI = "mongodb://localhost/pinkture";
 
 
 mongoose.connect(dbURI);
@@ -30,3 +30,5 @@ mongoose.connection.on("disconnected", function(){
 });
 
 require("./pinsema");
+require("../models/loginSchema.js");
+

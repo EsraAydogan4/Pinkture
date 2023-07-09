@@ -1,7 +1,6 @@
 var mongoose = require("mongoose");
-var Login = mongoose.model("login");
-
-import Login from "../models/loginSchema.js";
+// var Login = mongoose.model("login");
+// import Login from "../models/loginSchema.js"; // Import the Login model
 
 const girisyap = (req, res) => {
   const { username, password } = req.body; // Assuming you're expecting the username and password in the request body
@@ -29,4 +28,4 @@ const girisyap = (req, res) => {
   });
 };
 
-export default girisyap;
+module.exports = {girisyap};

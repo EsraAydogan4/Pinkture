@@ -7,7 +7,7 @@ const loginSchema = new Schema({
     password: {type: String, required: true},
 });
 
-const Login= mongoose.model("Login",loginSchema);
+const Login = mongoose.model("Login", loginSchema);
 
 export default Login
 

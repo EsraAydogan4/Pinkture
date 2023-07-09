@@ -9,6 +9,7 @@ const UserPage = () => {
     alert('Shared!');
   };
 
+  // const user = fetch('http://localhost:3001/getuser/' + id, )
   const [boardList, setBoardList] = useState([
     {
       id: 1,

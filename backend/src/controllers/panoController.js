@@ -1,5 +1,5 @@
-const Board = require("../models/Board");
-const Pano = require("../models/Pano");
+// const Board = require("../models/Board");
+const Pano = require("../models/panoSchema");
 // Pano sayfasını getir
 const getPanoPage = async (req, res) => {
   try {

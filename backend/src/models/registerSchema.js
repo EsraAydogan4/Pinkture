@@ -1,18 +1,18 @@
-import mongoose from "mongoose"; 
+// import mongoose from "mongoose"; 
 
-const { Schema } = mongoose;
+// const { Schema } = mongoose;
 
-const registerSchema = new Schema({
-    name: {type: String, required: true},
-    surname: {type: String, required: true},
-    email: {type: String, required: true},
-    username: {type: String, required: true},
-    password: {type: String, required: true}
-});
+// const registerSchema = new Schema({
+//     name: {type: String, required: true},
+//     surname: {type: String, required: true},
+//     email: {type: String, required: true},
+//     username: {type: String, required: true},
+//     password: {type: String, required: true}
+// });
 
-const Register= mongoose.model("Register",registerSchema);
+// const Register= mongoose.model("Register",registerSchema);
 
-export default Register
+// export default Register
 
 
 // var userSema=new mongoose.Schema({

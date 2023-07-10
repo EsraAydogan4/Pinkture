@@ -88,14 +88,4 @@ app.put('/pages/userSettings', (req, res) => {
   res.status(200).json({ message: 'Kullanıcı ayarları güncellendi.' });
 });
 
-// Kullanıcı ayarlarını döndüren bir endpoint
-app.get('/pages/userSettings/:id', (req, res) => {
-  res.status(200).json(userSettings);
-});
-
-// Express uygulamasının belirli bir portta dinlemesi
-app.listen(3000, () => {
-  console.log('Sunucu 3000 portunda çalışıyor.');
-});
-
 module.exports = {app, userSettings};

@@ -12,7 +12,7 @@ export default function Register() {
 
   async function register(ev){
     ev.preventDefault();
-    await fetch('http://localhost:3000/pages/register',{
+    await fetch('http://localhost:3001/pages/register',{
       method: 'POST',
       body:JSON.stringify({name,surname,username,email,password}),
       headers: {'Content-Type':'application/json'},

@@ -1,10 +1,31 @@
 import React from 'react';
 import './userSettings.css';
+import axios from "axios"
 
-const UserSettings = () => {
+function UserSettings () {
+  const performClick = (evt) => {
+    evt.preventDefault();
+    var profileInfo = {
+      name: evt.target.elements.name.value,
+      email: evt.target.elements.email.value,
+      username: evt.target.elements.username.value,
+      password: evt.target.elements.password.value,
+      bio: evt.target.elements.bio.value,
+      interests: evt.target.elements.interests.value,
+    };
+    axios.put("http://localhost:3001/pages/userSettings",profileInfo).then(function(response){
+      console.log(response);
+    });
+    
+    }
+  
   return (
-    <div className="profile-settings">
+    <div>
       <h1 className="section-title">Profile Settings</h1>
+      <form className='profile-settings'
+              id="saveChanges"
+              onSubmit={performClick}
+            >
       <div className="form-field">
         <label htmlFor="name">Name</label>
         <input type="text" id="name" name="name" defaultValue="John Doe" />
@@ -39,6 +60,7 @@ const UserSettings = () => {
       <div className="form-field">
         <button>Save Changes</button>
       </div>
+      </form>
     </div>
   );
 };

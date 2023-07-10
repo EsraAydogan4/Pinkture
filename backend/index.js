@@ -58,12 +58,22 @@ mongoose
 
     // Profil Ayarlarını Güncelleme
     app.put("/pages/userSettings", (req, res) => {
+      //body nesnesinde tüm bilgiler var konsolda görebilirsin.
+      //aşağıda değişken olarak ekli. Buradaki bilgileri alıp şemana gönderip kaydedebilirsin.
+      console.log(req.body);
+      let name= req.body.name;
+      let email= req.body.email;
+      let username=req.body.username;
+      let password= req.body.password;
+      let bio=req.body.bio;
+      let interests=req.body.interests;
+
       // Profil ayarlarını güncelleme işlemini gerçekleştir
       // Gerekli validasyonları yap
       // Veritabanında profil ayarlarını güncelle
       // Başarılı bir yanıt döndür
       res.json({ success: true, message: "Profil ayarları güncellendi" });
-      res.send("Profil ayarları güncellendi");
+  
     });
     app.get("/pages/userSettings/:id", (req, res) => {
       // Profil ayarlarını güncelleme işlemini gerçekleştir

@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
-require("./src/clients/db");
 // const { getUserSettings } = require("./src/controllers/userController");
 const port = 3001;
 const loginController = require("./src/controllers/loginController.js");
@@ -10,7 +9,6 @@ const loginController = require("./src/controllers/loginController.js");
 const userController = require("./src/controllers/userController.js");
 // const panoController = require("./src/controllers/panoController.js");
 // const userSettingsController = require("./src/controllers/userSettingsController.js");
-const UserSettings = require("./src/models/userSettingsSchema.js");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
@@ -23,7 +21,7 @@ mongoose
     useUnifiedTopology: true,
   })
 // mongoose
-//   .connect("mongodb://localhost/pinkture", {
+//   .connect("mongodb://localhost/test", {
 //     useNewUrlParser: true,
 //     useUnifiedTopology: true,
 //   })
@@ -82,7 +80,7 @@ mongoose
       // Gerekli validasyonları yap
       // Veritabanında profil ayarlarını güncelle
       // Başarılı bir yanıt döndür
-      res.json(UserSettings);
+      res.json(userSettings);
       res.send("Profil ayarları getirildi");
     });
 
@@ -96,7 +94,7 @@ mongoose
       res.json({ success: true, message: "Pin silindi" });
     });
     app.get("/getUser", (req, res) => {
-      const test = UserSettings(req.body.userId, res);
+      const test = getUserSettings(req.body.userId, res);
       res.json({ success: true, test });
     });
     // Pano Düzenleme

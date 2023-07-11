@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Pinkture
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Süleyman Demirel Üniversitesi Bilgisayar Mühendisliği bölümünde Yazılım Mühendisliği dersi için yapmış olduğumuz bir web sitesidir. İlgi alanlarına göre gruplanan görsel paylaşımı mantığıyla kurulmuştur.
 
-## Available Scripts
+Uygulamamızın sunduğu imkanlar:  
 
-In the project directory, you can run:
+- Ürünleri ve ürün detaylarını görüntüleme,
+- Kayıt olabilme,
+- Giriş yapabilme,
+- İstediği kategoride pin aratabilme,
+- Pinleri beğenebilme,
+- Pinlere yorum yapabilme,
+- Diğer kullanıcılarla mesajlaşabilme,
+- Pin ekleyebilme,
+- Pinleri paylaşabilme,
+- Pinleri düzenleyebilme,
+- Pinleri gizleyebilme,
+- Pano oluşturabilme,
+- Pano düzenleyebilme,
+- Profillerini düzenleyebilme,
+- Profili paylaşabilme,
+- Panodan pin silebilme,
+- Diğer kullanıcıları takip edebilme.
 
-### `npm start`
+## Uygulama Özellikleri
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Bu uygulama `npx create-react-app` komutu ile oluşturulmuş bir React.js projesidir.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Uygulama frontend ve backend olmak üzere iki kısımdan oluşmaktadır.
+- Frontend çatısı olarak [ReactJs](https://react.dev/) kullanılmıştır.
+- Backend Çatısı olarak [Express.Js](https://expressjs.com/) kullanılmıştır.
+- Frontend ve backend arasındaki iletişim Rest Api ile sağlanmıştır.
 
-### `npm test`
+## **Kullanılan Teknolojiler ve Araçlar**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Front-end: React
+- Back-end: ExpressJS
+- Veritabanı: MongoDB
+- Veri Modelleme: Mongoose
+- Component Kütüphanesi : Mui
+- Haberleşme: REST API, Axios, React Query
+- Sayfa Yönlendirme: React Router Dom
+- Test: Thunder Client
+- IDE: Visual Studio Code
+- REST API Client: Thunder Client
+- Versiyonlama: Git
 
-### `npm run build`
+## Uygulamanın Kişisel Bilgisayarınıza İndirilmesi
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Uygulamayı İndirmek İçin :**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/SDU-Bilgisayar-Muhendisligi/Pinkture.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## **Kütüphanelerin Yüklenmesi**
 
-### `npm run eject`
+Çalıştırmadan önce gerekli kütüphanelerin yüklenmesi gerekir. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Uygulama içindeki Back-End klasörü içindeyken terminalde aşağıdaki komutu kullanarak bu kütüphaneleri yükleyin.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Uygulama içindeki Front-End klasörü içindeyken terminalde aşağıdaki komutu kullanarak bu kütüphaneleri yükleyin.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+```
 
-## Learn More
+## Uygulamanın Çalıştırılması
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Uygulama içindeki Backend klasörü içindeyken terminalde aşağıdaki komutu kullanarak Back-End’i çalıştırın.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+node index.js 
+```
 
-### Code Splitting
+Back-End çalışınca terminal şöyle görünecek : 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![backend](https://github.com/SDU-Bilgisayar-Muhendisligi/Pinkture/assets/72518776/dc018b4f-e004-4471-ab8f-7db8cb93b46b)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Şimdi de uygulama içindeki Frontend klasörü içindeyken terminalde aşağıdaki komutu kullanarak Front-End’i çalıştırın.
 
-### Making a Progressive Web App
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Front-End çalışınca terminal şöyle görünecek : 
 
-### Advanced Configuration
+![image](https://github.com/SDU-Bilgisayar-Muhendisligi/Pinkture/assets/72518776/3d96f31b-68a2-4bd7-8e29-589432cf22f3)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+Uygulama artık local’inizde çalışır halde.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#

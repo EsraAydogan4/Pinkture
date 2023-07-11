@@ -1,13 +1,13 @@
-// const Board = require("../models/Board");
 const Pano = require("../models/panoSchema");
+
 // Pano sayfasını getir
 const getPanoPage = async (req, res) => {
   try {
     // Pano verisini veritabanından al
-    const board = await Board.findById(req.params.boardId);
+    const pano = await Pano.findById(req.params.boardId);
 
     // Pano sayfasını render et
-    res.render("pano", { board });
+    res.render("pano", { pano });
   } catch (error) {
     console.log(error);
     res.status(500).send("Bir hata oluştu");
@@ -15,17 +15,17 @@ const getPanoPage = async (req, res) => {
 };
 
 // Pano ayarlarını güncelle
-const updateBoardSettings = async (req, res) => {
+const updatePanoSettings = async (req, res) => {
   try {
     // Pano verisini veritabanından güncelle
-    const updatedBoard = await Board.findByIdAndUpdate(
+    const updatedPano = await Pano.findByIdAndUpdate(
       req.params.boardId,
       req.body,
       { new: true }
     );
 
     // Güncellenmiş pano verisini geri dön
-    res.json(updatedBoard);
+    res.json(updatedPano);
   } catch (error) {
     console.log(error);
     res.status(500).send("Bir hata oluştu");
@@ -33,7 +33,7 @@ const updateBoardSettings = async (req, res) => {
 };
 
 //create pano
-const createBoard = async (req, res) => {
+const createPano = async (req, res) => {
   try {
     const { title, pins } = req.body;
 
@@ -52,6 +52,6 @@ const createBoard = async (req, res) => {
 
 module.exports = {
   getPanoPage,
-  updateBoardSettings,
-  createBoard,
+  updatePanoSettings,
+  createPano,
 };

@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 
-userPageSchema.set('id', true);
+// userPageSchema.set('id', true);
 
 const userPageSchema = new mongoose.Schema(
   {
@@ -34,6 +34,4 @@ const userPageSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const UserPage = mongoose.model('UserPage', userPageSchema);
-
-module.exports = UserPage;
+module.exports = mongoose.model('UserPage', userPageSchema);

@@ -3,11 +3,21 @@ import './userPage.css'; // Stil dosyanızın yolunu doğru şekilde güncelleyi
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faComment, faShare } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import axios from "axios"
+
 
 const UserPage = () => {
+  
   const handleShare = () => {
     alert('Shared!');
   };
+
+
+  axios.get("http://localhost:3001/pages/userPage").then(function(response){
+      console.log(response);
+    });
+
+
 
   // const user = fetch('http://localhost:3001/getuser/' + id, )
   const [boardList, setBoardList] = useState([
@@ -79,6 +89,7 @@ const UserPage = () => {
           <div className="profile-username">@johndoe</div>
           <div className="profile-bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, veritatis?</div>
           <div className="profile-location">Istanbul, Turkey</div>
+
 
           <div className="profile-stats">
             <div className="stat">

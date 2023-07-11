@@ -2,8 +2,6 @@
 
 const mongoose = require('mongoose');
 
-userSettingsSchema.set('id', true);
-
 const userSettingsSchema = new mongoose.Schema(
   {
     name: {
@@ -33,7 +31,7 @@ const userSettingsSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-
+userSettingsSchema.set('id', true);
 const UserSettings = mongoose.model('UserSettings', userSettingsSchema);
 
 module.exports = UserSettings;

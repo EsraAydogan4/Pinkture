@@ -29,6 +29,8 @@ mongoose.connection.on("disconnected", function(){
     console.log("baglantı kesildi\n");
 });
 
-require("./pinsema");
+require("../models/userPageSchema.js");
 require("../models/loginSchema.js");
+require("../models/userSettingsSchema.js");
+require("../models/panoSchema.js");
 

@@ -4,6 +4,17 @@ import { faHeart, faComment, faShare, faTrash } from '@fortawesome/free-solid-sv
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import './pano.css';
+import axios from "axios";
+
+axios.post("http://localhost:3001/pages/pano").then(function(response){
+      console.log(response);
+    });
+axios.put("http://localhost:3001/pages/pano").then(function(response){
+      console.log(response);
+    });
+axios.get("http://localhost:3001/pages/pano").then(function(response){
+      console.log(response);
+    });
 
 
 

@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
+require("./src/clients/db")
 // const { getUserSettings } = require("./src/controllers/userController");
 const port = 3001;
 const loginController = require("./src/controllers/loginController.js");
@@ -13,6 +14,7 @@ const userController = require("./src/controllers/userController.js");
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.json());
+// app.use(express.static("public"));
 
 //MongoDB bağlantısı
 mongoose
@@ -72,6 +74,7 @@ mongoose
       // Gerekli validasyonları yap
       // Veritabanında profil ayarlarını güncelle
       // Başarılı bir yanıt döndür
+      
       res.json({ success: true, message: "Profil ayarları güncellendi" });
   
     });
@@ -85,7 +88,7 @@ mongoose
     });
 
     // Pano'dan Pin Silme
-    app.delete("/api/boards/:boardId/pins/:pinId", (req, res) => {
+    app.delete("/pages/pano/:boardId/pins/:pinId", (req, res) => {
       const { boardId, pinId } = req.params;
       // Belirtilen boardId ve pinId'ye sahip pini bul
       // Gerekli izin kontrolünü yap
@@ -108,7 +111,10 @@ mongoose
     });
 
     // Pano Oluşturma
-    app.post("/api/boards", (req, res) => {
+    app.post("/pages/pano", (req, res) => {
+      console.log(req.body);
+      let name= req.body.title;
+      
       // Yeni pano oluşturma işlemini gerçekleştir
       // Gerekli validasyonları yap
       // Yeni oluşturulan panonun bilgilerini veritabanına kaydet

@@ -10,6 +10,7 @@ const UserPage = () => {
   
   const handleShare = () => {
     alert('Shared!');
+    
   };
 
 

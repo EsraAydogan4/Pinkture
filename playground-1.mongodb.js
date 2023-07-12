@@ -31,7 +31,7 @@ const salesOnApril4th = db.getCollection('sales').find({
 
 // Print a message to the output window.
 console.log(`${salesOnApril4th} sales occurred in 2014.`);
-
+mongodb://localhost:3000
 // Here we run an aggregation and open a cursor to the results.
 // Use '.toArray()' to exhaust the cursor to return the whole result set.
 // You can use '.hasNext()/.next()' to iterate through the cursor page by page.

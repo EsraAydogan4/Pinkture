@@ -9,8 +9,8 @@ function Pin({ pinSize }) {
 
   return (
     <div className={`pin ${pinSize}`}>
-      <a href="./pages/comment" >
-        <img className="mainPic" src="./img/ahalteke.jpeg" alt="" />
+      <a href="./pages/comment" target="_blank" >
+        <img className="mainPic" src="./img/ahalteke.jpg" alt="" />
       </a>
       <div className="content">
         <h3>Rüzgar</h3>
@@ -26,7 +26,8 @@ function Home() {
 
   return (
     <>
-      <div>     
+      <div>
+      
     </div>
     <main>
         

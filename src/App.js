@@ -5,8 +5,7 @@ import NavBar from './Components/NavBar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login/login';
 import Register from './pages/Register/register';
-import CommentPage from './pages/Comment/CommentPage'; // Düzeltme yapıldı
-import Search from './Components/SearchBox';
+import CommentPage from './pages/Comment/CommentPage'; 
 
 function App() {
   return (
@@ -17,7 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/pages/login" element={<Login />} />
           <Route path="/pages/register" element={<Register />} />
-          <Route path="/pages/comment" element={<CommentPage />} /> {/* Düzeltme yapıldı */}
+          <Route path="/pages/comment" element={<CommentPage />} /> 
         </Routes>
       </Router>
     </div>

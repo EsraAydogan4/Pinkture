@@ -2,6 +2,7 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
+  background-color: #f5f5f5; /* Arka plan rengini ayarla */
 }
 
 .mainPic {
@@ -30,19 +31,78 @@
 
 .comment-page-comment {
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
-.comment-profile img {
-  width: 30px;
-  height: 30px;
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  padding-right: 100px;
+}
+
+
+.profile-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+ 
+}
+
+.image-description {
+  color: #777;
+}
+
+.comment-content {
+  margin-left: 10px;
+}
+
+.comment-username {
+  font-weight: bold;
+}
+
+.comment-text {
+  margin-top: 5px;
+}
+
+.image-description {
+  margin-top: 10px;
+}
+.profile-img {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-img img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
   border-radius: 50%;
   margin-right: 10px;
 }
 
-.comment-content {
-  margin-left: 40px;
+.like-icon {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-image 0.3s;
+  margin-left: auto;
+  margin-right: 0;
+}
+.like-icon.liked {
+  background-image: url('./redHeart.jpg');
 }
 
-.comment-description {
-  margin-left: 40px;
+.like-icon:not(.liked) {
+  background-image: url('./greyHeart.jpg');
 }

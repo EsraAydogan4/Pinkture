@@ -1,75 +1,82 @@
 import React, { useState, useEffect } from 'react';
 import './CommentPage.css';
 import axios from 'axios';
+import redHeart from './redHeart.jpg';
+import greyHeart from './greyHeart.jpg';
+
 
 function CommentPage() {
   const [newComment, setNewComment] = useState('');
-  const [comments, setComments] = useState([ {
-    content: 'Bu bir yorumdur',
-    author: {
-      profileImg: 'kedi1.jpeg',
-      // Diğer kullanıcı bilgileri
-    },
-  },
-  // Diğer yorumlar
-]);
+  const [newAuthor, setNewAuthor] = useState('');
+  const [comments, setComments] = useState([]);
+  const [isLiked, setLiked] = useState(false);
+
+
   useEffect(() => {
-  // Sayfa yüklendiğinde yorumları getirme isteği yapılıyor
-  getComments();
+    getComments();
   }, []);
 
-  const getComments = async () => {
-    try {
-      const response = await axios.get('/api/comments'); // Yorumları getirmek için GET isteği yapılıyor
-      setComments(response.data);
-    } catch (error) {
-      console.error('Yorumlar alınamadı:', error);
-    }
+
+  const handleLike = () => {
+    setLiked(!isLiked);
   };
+  
+
   const handleCommentSubmit = async (e) => {
     e.preventDefault();
 
     const newCommentData = {
       content: newComment,
       author: {
-        name: 'Esra Aydoğan',
-        profileImg: 'kedi.jpeg',
+        name: newAuthor,
       },
     };
+
     try {
       const response = await axios.post('/api/comments', newCommentData);
       const savedComment = response.data;
       setComments([...comments, savedComment]);
       setNewComment('');
+      setNewAuthor('');
+
+      getComments();
     } catch (error) {
       console.error('Yorum kaydedilemedi:', error);
     }
   };
-  const createComment = async (newCommentData) => {
+  const getComments = async () => {
     try {
-      const response = await axios.post('/api/comments', newCommentData); // Yeni yorum oluşturmak için POST isteği yapılıyor
-      const savedComment = response.data;
-      setComments([...comments, savedComment]);
+      const response = await axios.get('/api/comments');
+      setComments(response.data.comments);
     } catch (error) {
-      console.error('Yorum kaydedilemedi:', error);
+      console.error('Yorumlar alınamadı:', error);
     }
   };
-
-  const deleteComment = async (commentId) => {
-    try {
-      await axios.delete(`/api/comments/${commentId}`); // Yorumu silmek için DELETE isteği yapılıyor
-      const updatedComments = comments.filter((comment) => comment.id !== commentId);
-      setComments(updatedComments);
-    } catch (error) {
-      console.error('Yorum silinemedi:', error);
-    }
-  };
-
+  
 
   return (
     <div className="comment-page-container">
-      <img className="mainPic" src="/img/ahalteke.jpeg" alt="" />
+      <img className="mainPic" src="/img/ahalteke.jpg" alt="" />
+      <div className="profile-info">
+        <div className="profile-img">
+          <img src="/img/kedicik.jpg" alt="Profil Resmi" />
+          <div className="profile-text">
+            <span className="profile-name">Şirin Güneş</span>
+            <span className="image-description">Rüzgar bugün de mükemmel!</span>
+          </div>
+          <div className={`${isLiked ? 'like-icon liked' : 'like-icon'}`} onClick={handleLike}>
+            <img src={isLiked ? redHeart : greyHeart} alt="Beğen" />
+          </div>
+        </div>
+      </div>
       <form className="comment-page-form" onSubmit={handleCommentSubmit}>
+        <input
+          type="text"
+          placeholder="Adınızı girin"
+          value={newAuthor}
+          onChange={(e) => setNewAuthor(e.target.value)}
+          className="comment-page-input"
+        />
         <input
           type="text"
           placeholder="Yorumunuzu girin"
@@ -84,13 +91,12 @@ function CommentPage() {
       <div className="comment-page-comments">
         <h2>Yorumlar</h2>
         {comments.length > 0 ? (
-          comments.map((comment, index) => (
-            <div key={index} className="comment-page-comment">
-              <div className="comment-profile">
-                <img src={`/profiles/${comment.author.profileImg}`} alt="Profil Resmi" />
+          comments.map((comment) => (
+            <div key={comment._id} className="comment-page-comment">
+              <div className="comment-content">
+                <div className="comment-username">{comment.author.name}</div>
+                <div className="comment-text">{comment.content}</div>
               </div>
-              <div className="comment-content">{comment.content}</div>
-              <div className="comment-description">{comment.description}</div>
             </div>
           ))
         ) : (

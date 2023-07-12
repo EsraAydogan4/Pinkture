@@ -1,7 +1,7 @@
 var mongoose = require('mongoose' );
 // require("./"); //buraya bir sema verilcek
- var dbURI = "mongodb+srv://pinart:pinart@cluster0.uswwgnc.mongodb.net/?retryWrites=true&w=majority";
- //var dbURI = "mongodb://localhost/pinkture";
+//var dbURI = "mongodb+srv://pinart:pinart@cluster0.uswwgnc.mongodb.net/?retryWrites=true&w=majority";
+var dbURI = "mongodb://localhost/pinkture";
 
 
 mongoose.connect(dbURI);
@@ -29,4 +29,8 @@ mongoose.connection.on("disconnected", function(){
     console.log("baglantı kesildi\n");
 });
 
-require("./pinsema");
+require("../models/userPageSchema.js");
+require("../models/loginSchema.js");
+require("../models/userSettingsSchema.js");
+require("../models/panoSchema.js");
+require("../models/commentModel.js");

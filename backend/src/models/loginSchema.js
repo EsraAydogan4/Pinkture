@@ -1,4 +1,4 @@
-import mongoose from "mongoose"; 
+var mongoose = require("mongoose");
 
 const { Schema } = mongoose;
 
@@ -7,8 +7,8 @@ const loginSchema = new Schema({
     password: {type: String, required: true},
 });
 
-const Login= mongoose.model("Login",loginSchema);
+const Login = mongoose.model("Login", loginSchema);
 
-export default Login
+module.exports = Login;
 
 

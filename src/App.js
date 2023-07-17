@@ -1,3 +1,8 @@
+<<<<<<< HEAD:src/App.js
+=======
+// app.js
+// import './Reset.css';
+>>>>>>> 8d1369f1dd6287b1ecccc7a1e1cbbda0a87d00e3:frontend/src/App.js
 import React from 'react';
 import './App.css';
 import Home from './pages/Home/Home';

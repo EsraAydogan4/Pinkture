@@ -46,17 +46,20 @@ var Register = mongoose.model("register");
 // export default kayitol;
 
 
-const kayitOl= function(req,res){
-  Register.create({
-      name: req.body.name,
-      surname:req.body.surname,
-      email:req.body.email,
-      username:req.body.username,
-      password:req.body.password,
-  }, function(hata, Register) {
-    if(hata){
-      cevapolustur
-    }
-  }
-  )
-}
+// const kayitOl= function(req,res){
+//   Register.create({
+//       name: req.body.name,
+//       surname:req.body.surname,
+//       email:req.body.email,
+//       username:req.body.username,
+//       password:req.body.password,
+//   }, function(hata, Register) {
+//     if(hata){
+//       cevapolustur
+//     }
+//   }
+//   )
+// }
+// module.exports={
+//   kayitOl
+// }

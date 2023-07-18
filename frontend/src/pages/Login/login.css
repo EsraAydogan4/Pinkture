@@ -1,6 +1,4 @@
-<<<<<<< HEAD:src/pages/Login/Login.css
-input[type=text], input[type=password] {
-
+.input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -17,9 +15,6 @@ input[type=text], input[type=password] {
   .login-button {
     background-color: #f8186f;
     color: white;
-    /* padding: 14px 20px; */
-    /* margin: 8px 0; */
-    /* border: none; */
     cursor: pointer;
     width: 100%;
     border: 2px solid white;
@@ -35,26 +30,19 @@ input[type=text], input[type=password] {
   }
   /* Extra style for the cancel button (red) */
   .cancelbtn {
-    width: auto;
+    /* width: auto;
     padding: 10px 18px;
+    background-color: #f8186f; */
+    padding: 14px 20px;
     background-color: #f8186f;
+    border-color: white;
+    border: 2px solid white;
+    color: white;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   }
-<<<<<<< HEAD:src/pages/Login/Login.css
-   /* //Center the avatar image inside this container 
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-  }
-   //Avatar image 
-  img.avatar {
-    width: 40%;
-    border-radius: 50%;
-  }
-  // Add padding to containers 
-  .container {
-    padding: 16px;
-  } */
-=======
 
   .signupbtn{
     background-color: #f8186f;
@@ -69,7 +57,6 @@ input[type=text], input[type=password] {
     margin-top: 0px;
   }
    
->>>>>>> e58702c1b0f86b28944c8695f922f900e814b653:frontend/src/pages/Login/login.css
   /* The "Forgot password" text */
   span.psw {
     float: right;
@@ -79,7 +66,7 @@ input[type=text], input[type=password] {
   @media screen and (max-width: 300px) {
     span.psw {
       display: block;
-      float: none;
+      /* float: none; */
     }
     .cancelbtn {
       width: 100%;
@@ -88,4 +75,9 @@ input[type=text], input[type=password] {
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
       margin: 20px 90px;
     }
+}  
+
+a {
+  color: black; /* İstediğiniz rengi burada belirtebilirsiniz */
+  text-decoration: none; /* Altını çizgi gibi göstermemesi için */
 }

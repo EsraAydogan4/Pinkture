@@ -6,7 +6,6 @@ import { useState } from 'react';
 import './pano.css';
 import axios from "axios";
 
-
 axios.post("http://localhost:3001/pages/pano").then(function(response){
       console.log(response);
     });

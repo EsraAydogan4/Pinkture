@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: mistyrose;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+.profile-stats {
+  display: flex;
+  margin-top: 10px;
+}
+.stat {
+  margin-right: 20px;
+}
+.stat-value {
+  font-weight: bold;
+}
+.stat-label {
+  color: #888;
+}
+
+.share-icon {
+  font-size: 20px;
+  color: #6a6a6a;
+  cursor: pointer;
+  margin-left: 10px;
+
+}
+
+.share-icon:hover {
+  color: #ff4b5c;
+}
+
+.user-edit-button{
+  width: 100px;
+  height: 30px;
+  background-color: #f14285;
+  cursor: pointer;
+  border: 2px solid white;
+  padding: 0px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  margin: 0px;
+
+}
+
+.user-edit-button-text {
+  text-decoration: none;
+  color: white;
+}
+
+.boards {
+  margin: 20px; 
+}
+
+.user-create-board-button {
+    background-color: #f14285;
+    color: white;
+    cursor: pointer;
+    border: 2px solid white;
+    padding: 8px 15px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    margin: 20px 0px;
+    margin-top: 0px;
+    width: 200px; /* Dilediğiniz genişlik değeri */
+    height: 50px; /* Dilediğiniz yükseklik değeri */
+
+}
+
+.board {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #ffffff72;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 300px; /* Örnek genişlik değeri, isteğinize göre ayarlayabilirsiniz */
+  margin-right: 30px; /* İstediğiniz boşluk değerini ayarlayabilirsiniz */
+}
+.board-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.board-pins {
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-pin {
+  background-color: #ffffff72;
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.user-pin img {
+  max-width: 100%;
+}
+.user-pin-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.user-pin-action {
+  color: #888;
+  cursor: pointer;
+}
+.user-pin-action.active {
+  color: #ff4b5c;
+}

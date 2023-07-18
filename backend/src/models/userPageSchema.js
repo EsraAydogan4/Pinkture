@@ -1,8 +1,10 @@
-// userSettings.js
+// userPage.js
 
 const mongoose = require('mongoose');
 
-const userSettingsSchema = new mongoose.Schema(
+// userPageSchema.set('id', true);
+
+const userPageSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -31,7 +33,5 @@ const userSettingsSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-userSettingsSchema.set('id', true);
-const UserSettings = mongoose.model('UserSettings', userSettingsSchema);
 
-module.exports = UserSettings;
+module.exports = mongoose.model('UserPage', userPageSchema);

@@ -4,7 +4,6 @@ var mongoose = require('mongoose' );
 //  var dbURI = "mongodb://localhost/pinkture";
 
 
-
 mongoose.connect(dbURI);
 
 function kapat(msg,callback){

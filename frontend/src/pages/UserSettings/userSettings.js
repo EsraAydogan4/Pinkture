@@ -13,7 +13,7 @@ function UserSettings () {
       bio: evt.target.elements.bio.value,
       interests: evt.target.elements.interests.value,
     };
-    axios.put("http://localhost:3001/pages/userSettings", profileInfo).then(function(response){
+    axios.put("http://localhost:3001/pages/userSettings",profileInfo).then(function(response){
       console.log(response);
     });
     
@@ -28,15 +28,15 @@ function UserSettings () {
             >
       <div className="form-field">
         <label htmlFor="name">Name</label>
-        <input type="text" id="name" name="name" placeholder='enter your name' />
+        <input type="text" id="name" name="name" defaultValue="John Doe" />
       </div>
       <div className="form-field">
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" placeholder='enter your email' />
+        <input type="email" id="email" name="email" defaultValue="johndoe@example.com" />
       </div>
       <div className="form-field">
         <label htmlFor="username">Username</label>
-        <input type="text" id="username" name="username" placeholder='enter a username' />
+        <input type="text" id="username" name="username" defaultValue="johndoe" />
       </div>
       <div className="form-field">
         <label htmlFor="password">Password</label>
@@ -44,8 +44,8 @@ function UserSettings () {
       </div>
       <div className="form-field">
         <label htmlFor="bio">Bio</label>
-        <textarea id="bio" name="bio" placeholder='enter a biography of yourself'>
-          
+        <textarea id="bio" name="bio">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </textarea>
       </div>
       <div className="form-field">

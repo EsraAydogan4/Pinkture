@@ -1,0 +1,14 @@
+const database = 'pinkture';
+use(database);
+db.users.insertOne(
+{
+  "name": "Kahve Dünyası",
+  "surname": "Kahve Dünyassdjfl",
+  "email": "Iyaş",
+  "username": "5sdfs",
+  "password": "ffg",
+  "bio": "Kahve Dünyası",
+  "interests": "jkdnfjkd"
+ 
+}
+ );
